@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=country
+comment1.params=p
+comment1.target=void\ claim(int)
+comment2.params=af\ df\ ap\ dp
+comment2.target=void\ battle(int,\ int,\ int,\ int)
+numComments=3
