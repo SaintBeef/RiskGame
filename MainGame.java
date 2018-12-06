@@ -2,20 +2,21 @@ import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
+import java.io.*;
 
-public class mainStage extends JPanel {
+public class MainGame extends JPanel {
     static int wi = 480, he = 600;
-    public mainStage(int p) {
+    public MainGame() {
         wi = getWidth(); 
         he = getHeight();
         setBackground(Color.BLUE);
-        init(p);
+        init();
     }
 
-    public static void init(int p) {
+    public static void init() {
         JFrame frame = new JFrame();
         BufferedImage map = new BufferedImage(he, wi, BufferedImage.TYPE_INT_RGB);
-        
+        File regdata = new File("regdata.txt");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(he, wi);
         frame.setResizable(true);

@@ -2,28 +2,20 @@ import java.util.*;
 
 public class country {
     // Soldiers in region, who owns region
-    static int ss = 0, oP = 0, x, y, id;
-    static int[] nC;
+    private int sol, player, xloc, yloc;
+    private int[] nC;
+    private String regname;
     
-    public country(int xc, int yc, int id0, int[] neighboring) {
-        x = xc;
-        y = yc;
-        id = id0;
+    public country(int xc, int yc, int[] neighboring, String n) {
+        sol = 1;
+        player = 0;
+        xloc = xc;
+        yloc = yc;
         nC = neighboring;
+        regname = n;
     }
     
-    public static void claim(int p) {
-        oP = p;
-    }
-    
-    // aTTACKING & dEFENDING
-    // Forces on both sides and registering which two sides are against eachother
-    // MAKE A CHECK FOR NEIGHBORING COUNTRIES!
-    public static void battle(int af, int df, int ap, int dp) {
-        
-        af--;
-        int winner = 0, sum = af + df;
-        if (Math.random()*sum <= af)
-            claim(af);
+    public void claim(int p) {
+        player = p;
     }
 }
