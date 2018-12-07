@@ -23,7 +23,7 @@ public class MainGame extends JPanel {
         Scanner sb = new Scanner(regdata);
         while(sb.hasNext()) {
             String[] params = sb.nextLine().split(",");
-            cuntreg.add(new country());
+            cuntreg.add(new country(params));
         }
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(he, wi);
